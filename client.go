@@ -1,10 +1,11 @@
 package cclient
 
 import (
-	"golang.org/x/net/proxy"
 	"net/http"
 
-	utls "gitlab.com/yawning/utls"
+	"golang.org/x/net/proxy"
+
+	utls "gitlab.com/yawning/utls.git"
 )
 
 func NewClient(clientHello utls.ClientHelloID, proxyUrl ...string) (http.Client, error) {

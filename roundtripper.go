@@ -13,7 +13,7 @@ import (
 	"golang.org/x/net/http2"
 	"golang.org/x/net/proxy"
 
-	utls "gitlab.com/yawning/utls"
+	utls "gitlab.com/yawning/utls.git"
 )
 
 var errProtocolNegotiated = errors.New("protocol negotiated")
@@ -21,7 +21,7 @@ var errProtocolNegotiated = errors.New("protocol negotiated")
 type roundTripper struct {
 	sync.Mutex
 
-	clientHelloId     utls.ClientHelloID
+	clientHelloId utls.ClientHelloID
 
 	cachedConnections map[string]net.Conn
 	cachedTransports  map[string]http.RoundTripper
